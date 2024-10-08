@@ -13,6 +13,8 @@ public class Character( string Name)
     public int BaseMana;
     private List<Item> _inventory;
     
+    
+    
     public int Attack(int damage){
         TotalDamage += damage + BaseDamage;
         return TotalDamage;
