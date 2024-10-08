@@ -45,9 +45,9 @@ public class FightManager(Character myCharacter, Character enemy)
                     myCharacter.RecivedDamage(enemy.TotalDamage);
                 }
                 
-                Console.WriteLine("Choose an action:");
-                Console.WriteLine("1. Attack");
-                Console.WriteLine("2. Heal");
+                Console.WriteLine($"Choose an action:");
+                Console.WriteLine($"1. Attack");
+                Console.WriteLine($"2. Heal");
                 
                 string userInput = Console.ReadLine();
                 
@@ -64,6 +64,35 @@ public class FightManager(Character myCharacter, Character enemy)
                     break;
                 }
 
+            }
+            else 
+            {
+                Console.WriteLine($"Choose an action:");
+                Console.WriteLine($"1. Attack");
+                Console.WriteLine($"2. Heal");
+                
+                string userInput = Console.ReadLine();
+                
+                switch (userInput)
+                {
+                    case "1":
+                    enemy.RecivedDamage(myCharacter.TotalDamage);
+                    break;
+                    case "2":
+                    myCharacter.Heal(Randomizator(9,17));
+                    break;
+                    default:
+                    Console.WriteLine("Invalid choice. Please choose 1 or 2.");
+                    break;
+                }
+                
+                bool accion = EnemyIQ();
+                
+                if (accion == true)
+                {
+                    myCharacter.RecivedDamage(enemy.TotalDamage);
+                }
+                
             }
             
         }

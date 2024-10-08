@@ -21,5 +21,6 @@ public class Program
             FightManager fightManager = new FightManager(myCharacter, enemy);
             fightManager.Fight();
           
+            
         }
     }
