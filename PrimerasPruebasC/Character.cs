@@ -3,7 +3,7 @@
 public class Character
 {
     public string Name;
-    public int MaxHitPoints = 100;
+    public int MaxHitPoints;
     public int BaseDamage = 10;
     public int TotalDamage;
     public int BaseArmor;
