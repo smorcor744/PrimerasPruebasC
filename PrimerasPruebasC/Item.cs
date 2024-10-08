@@ -1,7 +1,8 @@
 namespace PrimerasPruebasC;
 
 public interface Item
-    
 {
-    public void Apply(Character character);
+    void Apply(Character character);
+    void Desply(Character character);
+    
 }
