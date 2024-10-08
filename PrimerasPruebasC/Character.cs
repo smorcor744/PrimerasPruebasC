@@ -7,7 +7,10 @@ public class Character( string Name)
     public int BaseDamage = 10;
     public int TotalDamage;
     public int BaseArmor ;
+    public int TotalArmor ;
     public int ActualLife ;
+    public int MaxManaPoints = 100;
+    public int BaseMana;
     private List<Item> _inventory;
     
     public int Attack(int damage){
@@ -36,5 +39,7 @@ public class Character( string Name)
     {
         ActualLife -= damage -BaseDamage;
     }
+    
+
 
 }
