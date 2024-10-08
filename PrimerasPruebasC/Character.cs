@@ -9,6 +9,7 @@ public class Character
     public int BaseArmor;
     public int TotalArmor;
     public int ActualLife;
+    public int Speed;
     public int MaxManaPoints = 100;
     public int BaseMana;
     private List<Item> _inventory = new List<Item>();

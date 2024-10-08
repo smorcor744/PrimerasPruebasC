@@ -31,7 +31,7 @@ public class MagicStaff : Weapon
 
      public override void Desply(Character character)
     {
-        character.BaseDamage -= Damage; // Restablecer el daño
+        character.BaseDamage -= Damage;
         Console.WriteLine($"{character.Name} is no longer using the Magic Staff.");
         
     }
