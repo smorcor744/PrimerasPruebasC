@@ -3,16 +3,10 @@ namespace PrimerasPruebasC;
 public abstract class Weapon : Item
 {
     public string Name;
-    public int Damage;
+    private int Damage;
     
     public abstract void Apply(Character character);
-}
-class Axe : Weapon
-{
-    public override void Apply(Character character){}
+    public abstract void Desply(Character character);
+
 }
 
-class Sword : Weapon
-{
-    public override void Apply(Character character){}
-}

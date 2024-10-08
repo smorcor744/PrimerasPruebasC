@@ -8,12 +8,5 @@ public abstract class Protection : Item
     public abstract void Apply(Character character);
 }
 
-class Shield : Protection
-{
-    public override void Apply(Character character){}
-}
 
-class Helmet : Protection
-{
-    public override void Apply(Character character){}
-}
+
