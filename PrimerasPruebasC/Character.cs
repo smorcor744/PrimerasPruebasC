@@ -22,9 +22,8 @@ public class Character
         TotalArmor = BaseArmor;
     }
 
-    public int Attack(int damage)
+    public int Attack()
     {
-        TotalDamage += damage + BaseDamage;
         return TotalDamage;
     }
 
@@ -38,16 +37,22 @@ public class Character
         if (life + ActualLife > MaxHitPoints)
         {
             ActualLife = MaxHitPoints;
+            Console.WriteLine($"{Name} has healed {life} and has {ActualLife} of lifePoints.");
+
         }
         else
         {
             ActualLife += life;
+            Console.WriteLine($"{Name} has healed {life} and has {ActualLife} of lifePoints.");
+
         }
     }
 
     public void RecivedDamage(int damage)
     {
         ActualLife -= damage - BaseArmor;
+        Console.WriteLine($"{Name} has received {damage} of damage and has {ActualLife} of lifePoints.");
+
     }
     
     public void Equip(Item item)
