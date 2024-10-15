@@ -7,11 +7,23 @@ public class Minion
     public int Armor;
     public int Life;
 
-    public Minion(int maxLife, int damage, int armor, int life)
+    public Minion(int maxLife, int damage, int armor)
     {
-        MaxLife = maxLife;
+        Life = maxLife;
         Damage = damage;
         Armor = armor;
-        Life = life;
+
+    }
+
+    public int Attack()
+    {
+        return Damage;
+    }
+    
+    public void RecivedDamage(int damage)
+    {
+        Life -= damage - Armor;
+        Console.WriteLine($"Your Minion has received {damage} of damage and has {Life} of lifePoints.");
+
     }
 }
